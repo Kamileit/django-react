@@ -1,0 +1,20 @@
+import {GET_LEADS} from '../actions/type.js';
+
+const initialState = {
+    something: 'text',
+    leads: []
+}
+
+export default function (state = initialState,action){
+    switch (action.type){
+        case GET_LEADS:
+            return{
+                ...state,
+                leads: action.payload
+            };
+        default:
+            return state;
+    }
+
+}
+
